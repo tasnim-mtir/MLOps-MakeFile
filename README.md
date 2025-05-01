@@ -68,7 +68,7 @@ make predict
 ### Or custom FEATURES :
 Example of custom features "55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1"
 ```bash
-Make Prediction FEATURES="[55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1]" 
+Make Predict FEATURES="[55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1]" 
 ```
 
 Arguments:
