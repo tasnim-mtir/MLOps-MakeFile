@@ -248,8 +248,17 @@ project/
 
 ## Acknowledgments
 
-- [Scikit-learn](https://scikit-learn.org/)
-- [Imbalanced-learn](https://imbalanced-learn.org/)
-- [Flask](https://flask.palletsprojects.com/)
+Here's a polished **Acknowledgments** section following your preferred format:
 
 ---
+
+## Acknowledgments
+
+This project utilizes these open-source technologies:
+
+- [Scikit-learn](https://scikit-learn.org/) - Machine learning modeling and evaluation  
+- [Imbalanced-learn](https://imbalanced-learn.org/) - Handling class imbalance in the dataset  
+- [Flask](https://flask.palletsprojects.com/) - REST API development and deployment  
+- [Pandas](https://pandas.pydata.org/) - Data preprocessing and feature engineering  
+- [Joblib](https://joblib.readthedocs.io/) - Model serialization and loading  
+- [Make](https://www.gnu.org/software/make/) - Build automation and task management  
