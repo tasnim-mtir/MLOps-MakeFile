@@ -246,9 +246,6 @@ project/
 
 ---
 
-
----
-
 ## Acknowledgments
 
 This project utilizes these open-source technologies:
@@ -259,3 +256,4 @@ This project utilizes these open-source technologies:
 - [Pandas](https://pandas.pydata.org/) - Data preprocessing and feature engineering  
 - [Joblib](https://joblib.readthedocs.io/) - Model serialization and loading  
 - [Make](https://www.gnu.org/software/make/) - Build automation and task management  
+---
