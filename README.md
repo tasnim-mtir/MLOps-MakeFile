@@ -51,7 +51,7 @@ Starts the Flask development server using the virtual environment.
 ### 3. Train Model
 
 ```bash
-make train DATA_PATH=data/survey_lung_cancer.csv MODEL_PATH=models/best_gboost_model.pkl FEATURES_PATH=models/feature_names.pkl
+make train 
 ```
 
 Arguments:
@@ -59,14 +59,16 @@ Arguments:
 - `MODEL_PATH`: Output path for the trained model
 - `FEATURES_PATH`: Output path for the saved feature names
 
-### 4. Make Prediction or 
+### 4. Make Prediction 
 
 ```bash
-make predict MODEL_PATH=models/best_gboost_model.pkl FEATURES_PATH=models/feature_names.pkl FEATURES="60, 2, 2, 2, 1, 2, 1, 2, 2, 2, 1, 2"  
+make predict   
 ```
-Or custom FEATURES :
+### Or custom FEATURES :
 example : "55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1"
-### Make Prediction FEATURES="[55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1]" 
+```bash
+Make Prediction FEATURES="[55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1]" 
+```
 
 Arguments:
 - `MODEL_PATH`: Path to the saved model
