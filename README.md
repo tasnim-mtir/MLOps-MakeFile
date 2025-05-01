@@ -60,12 +60,13 @@ Arguments:
 - `FEATURES_PATH`: Output path for the saved feature names
 
 ### 4. Make Prediction 
+Default features: [60, 2, 2, 2, 1, 2, 1, 2, 2, 2, 1, 2]
 
 ```bash
 make predict   
 ```
 ### Or custom FEATURES :
-example : "55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1"
+Example of custom features "55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1"
 ```bash
 Make Prediction FEATURES="[55, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1]" 
 ```
