@@ -246,9 +246,6 @@ project/
 
 ---
 
-## Acknowledgments
-
-Here's a polished **Acknowledgments** section following your preferred format:
 
 ---
 
