@@ -8,10 +8,13 @@ DATA_PATH = data/survey_lung_cancer.csv
 MODEL_PATH = models/best_gboost_model.pkl
 FEATURES_PATH = models/feature_names.pkl
 
+# Optional: Default features, can be overridden via command line
+FEATURES = [60, 2, 2, 2, 1, 2, 1, 2, 2, 2, 1, 2]
+
 .PHONY: init
 init:
 	python -m venv $(VENV)
-	$(PIP) install --upgrade pip
+	$(PYTHON) -m pip install --upgrade pip
 	$(PIP) install -r requirements.txt
 
 .PHONY: run
@@ -20,13 +23,17 @@ run:
 
 .PHONY: train
 train:
-	$(PYTHON) -m flask train --data_path=$(DATA_PATH) --model_save_path=$(MODEL_PATH) --feature_names_path=$(FEATURES_PATH)
+	curl -X POST http://127.0.0.1:5000/api/train \
+	-H "Content-Type: application/json" \
+	-d "{\"data_path\": \"$(DATA_PATH)\", \"model_save_path\": \"$(MODEL_PATH)\"}"
 
 .PHONY: predict
 predict:
-	$(PYTHON) -m flask predict --model_path=$(MODEL_PATH) --feature_names_path=$(FEATURES_PATH) --features=$(FEATURES)
+	curl -X POST http://127.0.0.1:5000/api/predict \
+	-H "Content-Type: application/json" \
+	-d "{\"model_path\": \"$(MODEL_PATH)\", \"features\": $(FEATURES)}"
 
 .PHONY: clean
 clean:
-	rmdir /s /q __pycache__
-	rmdir /s /q $(VENV)
+	powershell -Command "if (Test-Path '__pycache__') { Remove-Item '__pycache__' -Recurse -Force }"
+	powershell -Command "if (Test-Path 'venv') { Remove-Item 'venv' -Recurse -Force }"
